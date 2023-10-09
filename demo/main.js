@@ -52,8 +52,9 @@ let lastname = "abadi"
 // console.log(typeof(nullableVariable))
 
 // console.log(typeof(price / 0)) // => result infinity 
+console.log(10 / 0)
 // console.log(typeof("ihab"/2)) // => result NaN
-
+console.log("ihab"/2)
 // console.log(`My fullname is ${firstname +" "+ lastname}`)
 
 // console.log(price > 20)
@@ -69,28 +70,28 @@ let lastname = "abadi"
 //Conditional structures
 // if statement
 
-let age = 70
+// let age = 70
 
-if(age >= 21) {
-    console.log("You are an adult")
-    console.log("You can drive")
-}else {
-    console.log("You need to wait")
-}
+// if(age >= 21) {
+//     console.log("You are an adult")
+//     console.log("You can drive")
+// }else {
+//     console.log("You need to wait")
+// }
 
-//if else statement
-if(age <=15) {
-    console.log("child")
-}
-else if(age > 15 && age < 18) {
-    console.log("Teenager")
-} else if(age >= 18 && age <=25) {
-    console.log("young adult")
-}else if(age >=25 && age <=65) {
-    console.log("Adult")
-}else {
-    console.log("Senior citizen")
-}
+// //if else statement
+// if(age <=15) {
+//     console.log("child")
+// }
+// else if(age > 15 && age < 18) {
+//     console.log("Teenager")
+// } else if(age >= 18 && age <=25) {
+//     console.log("young adult")
+// }else if(age >=25 && age <=65) {
+//     console.log("Adult")
+// }else {
+//     console.log("Senior citizen")
+// }
 
 //switch statement
 
