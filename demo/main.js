@@ -52,9 +52,9 @@ let lastname = "abadi"
 // console.log(typeof(nullableVariable))
 
 // console.log(typeof(price / 0)) // => result infinity 
-console.log(10 / 0)
+//console.log(10 / 0)
 // console.log(typeof("ihab"/2)) // => result NaN
-console.log("ihab"/2)
+//console.log("ihab"/2)
 // console.log(`My fullname is ${firstname +" "+ lastname}`)
 
 // console.log(price > 20)
@@ -139,6 +139,51 @@ switch(code) {
 // console.log(code > 300 ? "Danger" : "Cool")
 
 
-let undefinedVariable = 10n
+// let undefinedVariable = 10n
 
-console.log(undefinedVariable ?? "default value")
+// console.log(undefinedVariable ?? "default value")
+
+//While loop
+
+// console.warn("While loop")
+// let n = 11
+
+// while(n  < 10) {
+//     console.log(n)
+//     n++
+// }
+
+//do while
+// console.warn("do while loop")
+// n = 11
+
+// do {
+//     console.log(n)
+//     n++
+// }while(n < 10)
+
+//For Loop
+// console.warn("For loop")
+// for(let i=10; i >= 0; i=i-3) {
+//     console.log(i)
+// }
+
+//Break and continue instructions
+let n = 1 
+
+while(n < 10) {
+    
+    if(n % 4 == 0){
+        console.log("continue")
+        n++
+        continue
+    }
+    else {
+        console.log(n)
+        n++
+    }
+    
+}
+
+console.warn("End of loop")
+
