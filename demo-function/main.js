@@ -65,14 +65,12 @@
 
 //Anonymous function
 
-//To check
+let firstname = "ihab";
 
-// const message = "Custom message to our anonymous function"
-
-// (function(msg) {
-//   console.warn("Hello i'm anonymous function")  
-//   console.warn(msg)  
-// })("Custom message to our anonymous function")
+(function(msg) {
+  console.warn("Hello i'm anonymous function")  
+  console.warn(msg)  
+})(firstname)
 
 function compute(a, b, computationMethod) {
     console.log(computationMethod(a,b))
