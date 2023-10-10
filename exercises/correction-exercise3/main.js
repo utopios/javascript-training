@@ -20,5 +20,11 @@ function magicianPerformance(number, mysteriousFunction) {
     return mysteriousFunction(number)
 }
 
-// console.log(`The magic number with our magician performance is ${magicianPerformance(3, (a)=> a * a)}`)
-console.log(`The magic number with our magician performance is ${magicianPerformance(3, function(a){return a * a })}`)
+console.log(`The magic number with our magician performance is ${magicianPerformance(3, (a)=> {
+    //console.log(this)
+    return a * a
+})}`)
+console.log(`The magic number with our magician performance is ${magicianPerformance(3, function(a){
+    //console.log(this)
+    return a * a 
+})}`)
