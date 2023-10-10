@@ -17,7 +17,7 @@ Imagine you are putting on a theater play where the actors are functions. Each a
 
 
 
-## Exercise 4: 
+# Exercise 4: 
 
 ## The Arguments Café
 
