@@ -47,10 +47,7 @@
 //     console.log(`key : ${key}, value: ${person[key]}`)
 // }
 
-//Not work now, 
-// for(let val of person) {
-//     console.log(val)
-// }
+
 
 //Create object from the first one
 // const secondPerson = Object.create(person)
@@ -87,7 +84,9 @@
 
 //Create object with constructor function
 
-function Person(firstname, lastname) {
+function Person(firstname, lastname, phones) {
+
+    this.phones = phones
     this.firstname = firstname
     this.lastname = lastname
     this.fullname = firstname + " "+lastname
@@ -97,15 +96,64 @@ function Person(firstname, lastname) {
     // }
 }
 
-Person.prototype.printname = function() {
-    console.log(`hy im ${this.fullname}`)
+// Person.prototype.printname = function() {
+//     console.log(`hy im ${this.fullname}`)
+// }
+
+// Person.prototype.toString = function() {
+//     return this.fullname
+// }
+
+//const p1 = new Person("ihab", "abadi")
+//const p2 = new Person("toto", "tata")
+
+// p1.printname()
+// p2.printname()
+
+// console.log(p1)
+// console.log(p2)
+
+//console.log("This person object "+ p1)
+
+// let symbol1 = Symbol("symbol")
+// let symbol2= Symbol("symbol")
+
+// console.log(symbol1 === symbol2)
+
+// const obj =  {
+//     [symbol1] : "symbol value"
+// }
+
+
+Person.prototype[Symbol.toPrimitive] = function(hint) {
+    console.log(hint)
+    switch(hint) {
+        case "string":
+            return `Person is ${this.fullname}`
+        default:
+            return 0
+    }
 }
 
-const p1 = new Person("ihab", "abadi")
-const p2 = new Person("toto", "tata")
+Person.prototype[Symbol.iterator] = function() {
+    let index = 0
+    return {
+        next: () => {
+            if(index < this.phones.length) {
+                return {value : this.phones[index++], done: false }
+            } else {
+                return {done: true}
+            }
+        }
+    }
+}
 
-p1.printname()
-p2.printname()
-
+const p1 = new Person("ihab", "abadi", ["0101010101", "02020202020"])
 console.log(p1)
-console.log(p2)
+console.log(`person is ${p1}`)
+
+
+ 
+for(let val of p1) {
+    console.log(val)
+}
