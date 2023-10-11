@@ -36,5 +36,4 @@ You're tasked with implementing a basic banking system using JavaScript. This sy
     - getDetails(): Returns a string with the holder's name and account type.
 
 - Implement the method that converts the bank account object to a primitive type returning the account balance as specified.
-
-— Test your implementation by creating some bank accounts, depositing, withdrawing, and converting them to primitive types.
+- Test your implementation by creating some bank accounts, depositing, withdrawing, and converting them to primitive types.
