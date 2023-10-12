@@ -72,3 +72,90 @@ You've just gotten a new virtual plant. The goal? Take care of it and watch it g
     - When entering food, if it's a favorite, the calorie count can auto-populate (this can be simplified, e.g., "apple = 100 calories").
 
 
+## Exercice 3 Interactive Calendar
+
+
+**Objective:**
+
+Create a detailed and interactive calendar web application.
+
+**Tasks:**
+
+- Display and Navigation:
+    - Display a monthly view calendar with clickable dates.
+    - Enable navigation through different months and years.
+    - Highlight the current day.
+- Event Management:
+    - Clicking a date allows users to add/edit events with fields like title, time, and description.
+    - Events should be displayed on respective dates in the calendar view.
+    - Allow recurring events to be set (e.g., weekly, monthly).
+- Notifications:
+    - Implement local notifications (browser notifications) to remind users of events.
+    - Ensure notifications are pushed at a user-defined time before the event.
+- Local Storage:
+    - Store user events in local storage so that they persist even after the page is refreshed.
+
+## Exercice 4  Weather Dashboard
+
+**Objective:**
+
+Develop a dynamic weather dashboard that offers comprehensive weather reports.
+Tasks:
+
+- Dynamic Data Retrieval:
+    - Retrieve weather data asynchronously using promises and async/await from a weather API.
+    - Provide current weather, hourly forecasts, and a 7-day forecast.
+- User Interface:
+    - Implement modules for handling different aspects: UI update, API calls, data storage, etc.
+    - Display detailed weather info like temperature, humidity, wind speed, and icon representation of the weather.
+- Data Visualization:
+    - Implement charts or graphs for weather trends (e.g., temperature and rainfall over time).
+- User Preferences:
+    - Allow users to set preferred units of measurement.
+    - Enable users to save favorite locations for quick weather checks.
+- Offline Capability:
+    - Implement service workers to enable some degree of offline functionality, such as viewing previously fetched weather data.
+
+## Exercice 5 Task Manager
+
+**Objective:**
+
+Create a robust task manager application that helps users manage their activities efficiently.
+Tasks:
+
+- Task Management:
+    - Build a Task class with properties like title, description, dueDate, priority, and status.
+    - Create, Read, Update, and Delete (CRUD) functionality for tasks.
+- Task Filtering and Searching:
+    - Implement filtering by due date, priority, and status.
+    - Add a search bar to find tasks by keywords in the title or description.
+- User Authentication:
+    - Implement user authentication to allow personal task management for different users.
+    - Each user should have their own task list, stored securely.
+- Notifications:
+    - Integrate email or SMS notifications using external services/APIs.
+    - Implement in-app and browser notifications for task reminders.
+- Collaboration Features:
+    - Allow tasks to be assigned to different users (once they have created accounts).
+    - Implement a commenting system on tasks for user interaction.
+
+## Exercice 6 Travel Planning App (Asynchronous and Modules)
+**Objective**:
+
+Develop a travel planning app where users can plan trips by adding destinations, accommodations, and activities, integrating asynchronous calls for added functionalities.
+**Tasks**:
+
+- Trip Management:
+    - Implement CRUD operations for trips, where each trip has destinations, accommodations, and activities.
+    - Allow adding, editing, and removing of individual activities and accommodations for each destination.
+- Map and Location API Integration:
+    - Integrate a map API (like Google Maps) to allow users to select and view locations.
+    - Retrieve and display points of interest (like restaurants or tourist spots) near the chosen destination using asynchronous API calls.
+- Weather Integration:
+    - Utilize a weather API to provide weather forecasts for chosen destinations.
+- User Interaction:
+    - Implement comment and rating systems for accommodations and activities.
+- Cost Management:
+    - Allow users to input and track costs for accommodations, activities, and transportation.
+    - Provide a cost overview and breakdown for each trip.
+
