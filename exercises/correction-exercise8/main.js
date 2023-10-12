@@ -54,10 +54,12 @@ const displayPet = (pet) => {
 }
 
 const addPet = () => {
-    const randomPetType = Math.random() < 0.5 ? "Lion" : "Elephant"
+    //const randomPetType = Math.random() < 0.5 ? "Lion" : "Elephant"
+    const RandomPetType = Math.random() < 0.5 ? Lion : Elephant
     const randomName = sampleNames[Math.floor(Math.random() * sampleNames.length)]
 
-    const pet = randomPetType ===  "Lion" ? new Lion(randomName, randomPetType) : new Elephant(randomName, randomPetType)
+    //const pet = randomPetType ===  "Lion" ? new Lion(randomName, randomPetType) : new Elephant(randomName, randomPetType)
+    const pet = new RandomPetType(randomName)
     pets.push(pet)
     console.log(pet)
     petsSection.innerHTML += displayPet(pet)
