@@ -30,3 +30,21 @@ Create a virtual pet zoo where users can interact with individual animals, feedi
     - When a specific pet's "Feed" button is clicked, only that pet's hunger should decrease.
     Similarly, when a specific pet's "Play" button is clicked, only that pet's happiness should increase.
     - Ensure the display updates after each interaction.
+
+# Exercise: Random Joke Display
+
+**Objective**: Create a web page with a button. When the user clicks this button, a random joke is fetched from an API and displayed on the page.
+
+Instructions:
+
+1. Setting up the HTML structure:
+    - Create an HTML page with a button labeled "Give me a joke!".
+    Add an element, such as a paragraph <p>, where the joke will be displayed.
+
+2. JavaScript:
+    - Attach a click event listener to the button.
+    When the button is clicked, use the fetch function to get a random joke from the "JokeAPI" at https://v2.jokeapi.dev/joke/Any.
+    Use Promises (the .then() chain) to process the response. Convert the response to JSON, then extract and display the joke in the <p> element.
+
+3. Error Handling:
+    - Add error handling to address any issues when fetching data from the API. Display an error message to the user in such cases.
