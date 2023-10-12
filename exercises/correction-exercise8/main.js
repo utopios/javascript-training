@@ -5,27 +5,29 @@ class Pet {
         this.type = type
         this.hunger = 5
         this.happiness = 5
-        this.id =  ++Pet.count
+        this.id = ++Pet.count
     }
 
     feed() {
-        if(this.hunger > 0) this.hunger--
+        if (this.hunger > 0) this.hunger--
     }
 
     play() {
-        if(this.happiness < 10) this.happiness++
+        if (this.happiness < 10) this.happiness++
     }
 }
 
 class Lion extends Pet {
     constructor(name) {
         super(name, "Lion")
+        this.img = "https://www.anigaido.com/media/zoo_animaux/101-200/158/lion-de-l-atlas-panthera-leo-leo-xl.jpg"
     }
 }
 
 class Elephant extends Pet {
     constructor(name) {
         super(name, "Elephant")
+        this.img = "https://d1jyxxz9imt9yb.cloudfront.net/article/4647/meta_image/regular/elephant-calf-mom-IFAW_slash_B._Hollweg.jpg"
     }
 }
 
@@ -42,12 +44,14 @@ const sampleNames = ["Leo", "Max", "Ella", "Charlie", "Bella"]
 //FUNCTIONS
 
 const displayPet = (pet) => {
-    return  `
+    return `
     <div id='pet${pet.id}'>
+        <img src='${pet.img}' width='100px' />    
         Name : ${pet.name}<br/>
         Type : ${pet.type}<br/>
         Hunger : ${pet.hunger}<br/>
         Happiness: ${pet.happiness}<br/>
+
         <button data-id='${pet.id}' data-action='play'>Play</button><button data-id='${pet.id}' data-action='feed'>feed</button>
     </div>
     `
@@ -78,9 +82,9 @@ const actionOnPet = (e) => {
     const button = e.target
     const id = button.getAttribute("data-id")
     const action = button.getAttribute("data-action")
-    const foundPet = pets.find(p=> p.id == id)
-    if(foundPet) {
-        switch(action) {
+    const foundPet = pets.find(p => p.id == id)
+    if (foundPet) {
+        switch (action) {
             case "play":
                 foundPet.play()
                 break;
@@ -92,8 +96,8 @@ const actionOnPet = (e) => {
         }
         console.log(foundPet)
         //displayAllPets()
-        const petDiv = document.querySelector("#pet"+foundPet.id)
-        petDiv.innerHTML =  displayPet(foundPet)
+        const petDiv = document.querySelector("#pet" + foundPet.id)
+        petDiv.innerHTML = displayPet(foundPet)
     }
     else {
         alert("Pet don't exists")
